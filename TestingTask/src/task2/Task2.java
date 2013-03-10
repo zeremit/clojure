@@ -6,7 +6,7 @@ public class Task2 {
 
 	public static void main(String[] args) {
 		long t = 2;
-		while (t * t < number) {
+		while (t * t <= number) {
 			if (number % t == 0) {
 				number /= t;
 			} else {
