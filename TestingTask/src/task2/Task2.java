@@ -2,18 +2,17 @@ package task2;
 
 public class Task2 {
 
-	private static int first = 1;
-
-	private static int previous = 2;
-
-	private static int max = 4000000;
+	private static long number = 600851475143l;
 
 	public static void main(String[] args) {
-		while (previous < max) {
-			int t = previous;
-			previous = previous + first;
-			first = t;
+		long t = 2;
+		while (t * t < number) {
+			if (number % t == 0) {
+				number /= t;
+			} else {
+				t++;
+			}
 		}
-		System.out.printf("Result is " + previous);
+		System.out.printf("Result is " + number);
 	}
 }
